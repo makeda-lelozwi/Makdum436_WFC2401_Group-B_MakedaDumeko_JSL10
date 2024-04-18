@@ -15,6 +15,7 @@ The Escape Vanilla JS Challenge is an interactive web-based project designed to 
 - **Room 3: The Asynchronous Labyrinth:** Correctly implement asynchronous JavaScript to navigate through a series of steps.
 
 ### Code Logic
+
 ##### Room 1: The JSON Library
 
 **Scenario:** You're in a library filled with books containing secrets to mastering JavaScript. To find the key to the next room, you must parse through a collection of JSON-encoded books to find the most recently published book on JavaScript.
@@ -60,6 +61,3 @@ The provided HTML template sets up a simple user interface for the challenge, in
 - Enhanced understanding of asynchronous JavaScript, event handling, and working with sets.
 - Greater familiarity with JavaScript's interaction with the DOM.
 - Insight into the concept of abstraction in programming, demonstrated through the encapsulation of tasks and the separation of concerns in the challenge setup.
-
-
-
