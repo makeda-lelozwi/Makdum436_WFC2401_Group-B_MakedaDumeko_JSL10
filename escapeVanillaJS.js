@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 🪲 Bug: Incorrect ID used for attaching the event listener
+  //ROOM ONE
   document.getElementById("solveRoom1").addEventListener("click", () => {
     fetch("books.json")
       .then((response) => response.json())
       .then((books) => {
         const mostRecentBook = findMostRecentBook(books);
-        // 🪲 Bug: Incorrect element ID
         document.getElementById(
           "room1Result"
         ).textContent = `The key to the next room is: ${mostRecentBook.title}`;
@@ -40,9 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //ROOM ONE
 function findMostRecentBook(books) {
-  // 🪲 Bug: Logic error
   return books.reduce((mostRecent, book) =>
-    new Date(book.published) < new Date(mostRecent.published)
+    new Date(book.published) > new Date(mostRecent.published)
       ? book
       : mostRecent
   );
