@@ -13,13 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //ROOM TWO:
   document.getElementById("solveRoom2").addEventListener("click", () => {
-    const jsConcepts = new Set([
-      "closure",
-      "async",
-      "scope",
-      "hoisting",
-      "components",
-    ]);
+    const jsConcepts = new Set(["closure", "async", "scope", "hoisting"]);
 
     const reactConcepts = new Set(["components", "jsx", "hooks", "async"]);
 
@@ -31,14 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ).join(", ")}`;
   });
 
-  // 🪲 Bug: Asynchronous function ?
+  // ROOM THREE:
   document.getElementById("solveRoom3").addEventListener("click", () => {
     fetch("directions.json")
       .then((response) => response.json())
       .then((directions) => {
         navigateLabyrinth(directions).then((message) => {
           // 🪲 Bug: Incorrect method
-          document.getElementById("room3Result").innerHTML = message;
+          document.getElementById("room3Result").textContent = message;
         });
       });
   });
@@ -65,6 +59,7 @@ function findIntersection(setA, setB) {
   return intersection;
 }
 
+//ROOM THREE:
 async function navigateLabyrinth(directions) {
   for (let direction of directions) {
     // 🪲 Bug: No delay
