@@ -39,11 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //ROOM ONE
 function findMostRecentBook(books) {
-  return books.reduce((mostRecent, book) =>
+  const recentBook = books.reduce((mostRecent, book) =>
     new Date(book.published) > new Date(mostRecent.published)
       ? book
       : mostRecent
   );
+  return recentBook;
 }
 
 function findIntersection(setA, setB) {
