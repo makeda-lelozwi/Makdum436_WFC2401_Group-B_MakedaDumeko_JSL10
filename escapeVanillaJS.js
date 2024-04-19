@@ -66,7 +66,6 @@ function findIntersection(setA, setB) {
 //ROOM THREE:
 async function navigateLabyrinth(directions) {
   for (let direction of directions) {
-    // 🪲 Bug: No delay
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log(`Navigating: ${direction.step}`);
   }
